@@ -76,8 +76,10 @@ How to run code
 - Install dependencies
   - pip install opencv-python numpy
 
-- replace image names at lines 45 & 46.
+- Replace comments with image relative path at lines 45 & 46 .
   - Input requires the original image for metric evaluation and the noisy image to perform the algorithm.
+
+- Replace comments with the relative path of the folder where you want your output images to be at lines 62, 72, 95, and 105.
 
 -------------------------------------
 Author
