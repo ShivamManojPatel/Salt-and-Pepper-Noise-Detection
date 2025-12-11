@@ -41,7 +41,7 @@ Output images
 - Noise_detected.jpg (Gray background showing noise)
 - Median_selective.jpg
 
-Note: The names of output images in the project repository are different because we had certain guidelines for our academic project. But we have modified the code to produce images that are listed above. This code is not limited to the Lena image. You can operate on your images too, just follow the  **How to run code** section.
+**Note:** The names of output images in the project repository are different because we had certain guidelines for our academic project. But we have modified the code to produce images that are listed above. This code is not limited to the Lena image. You can run your images too; follow the  **How to run code** section.
 
 -------------------------------------
 Minor feature
@@ -70,13 +70,15 @@ Output Metrics
 | SNR    | 16.881154   | 19.729557        | 2.848404     | 16.873276%     |
 | PSNR   | 24.418496   | 27.266900        | 2.848404     | 11.664943%     |
 
+**Note:** These table numbers are for my image, i.e., Lena.jpg and Lena_noisy.jpg. Numbers may vary for your images.
+
 -------------------------------------
 How to run code
 -------------------------------------
 - Install dependencies
   - pip install opencv-python numpy
 
-- Replace comments with image relative path at lines 45 & 46 .
+- Replace comments with image relative path at lines 45 & 46.
   - Input requires the original image for metric evaluation and the noisy image to perform the algorithm.
 
 - Replace comments with the relative path of the folder where you want your output images to be at lines 62, 72, 95, and 105.
