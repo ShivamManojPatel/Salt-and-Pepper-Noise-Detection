@@ -44,15 +44,6 @@ Output images
 **Note:** The names of output images in the project repository are different because we had certain guidelines for our academic project. But we have modified the code to produce images that are listed above. This code is not limited to the Lena image. You can run your images too; follow the  **How to run code** section.
 
 -------------------------------------
-Minor feature
--------------------------------------
-- Role-based access control (Different login flow for customer and admin. But, same login page).
-- Secure integration payment gateway using Stripe.
-- Booking status based on stage of booking for better understanding (Pending, confirmed, cancelled, completed).
-- Filters for sorting cars for a better surfing experience (by price range, brand, transmission type, etc).
-- Logging in before renting or making a reservation for security and audit.
-
--------------------------------------
 Output Metrics
 -------------------------------------
 ## Table 1 – MSE, SNR, PSNR for All Images
