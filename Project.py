@@ -42,8 +42,8 @@ def print_metrics(title, mse, snr, psnr): #simple function to print metrics
     print()
 
 #--- Step 1: Load the images ---#
-original = cv2.imread(r"D:\UCA\Fall 2025\Multimedia Computing\Project 4\Lena.jpg", cv2.IMREAD_GRAYSCALE)
-noisy = cv2.imread(r"D:\UCA\Fall 2025\Multimedia Computing\Project 4\Lena_noise.jpg", 0)
+original = cv2.imread(r"<Relative path for your original image>", cv2.IMREAD_GRAYSCALE)
+noisy = cv2.imread(r"{<Relative path for your noisy image>", 0)
 
 if original is None or noisy is None:
     raise FileNotFoundError("One or both image files not found.") #exception in case files are not found
@@ -59,7 +59,7 @@ print("Step 2..............................Complete")
 
 #--- Step 3: Apply 3X3 average filter ---#
 avg_filtered = cv2.blur(noisy, (3, 3)) #3x3 average filter
-cv2.imwrite(r'D:\UCA\Fall 2025\Multimedia Computing\Project 4\Lena_averaged.jpg', avg_filtered) #save the image as Lena_averaged.jpg
+cv2.imwrite(r'<Relative path of your folder where you want to save image>\Averaged.jpg', avg_filtered) #save the image as Lena_averaged.jpg
 
 MSE2 = calculate_mse(original, avg_filtered)
 SNR2 = calculate_snr(original, avg_filtered)
@@ -69,7 +69,7 @@ print("Step 3..............................Complete")
 
 #--- Step 4: Apply 3X3 median filter ---#
 median_filtered = cv2.medianBlur(noisy, 3) #3x3 median filter
-cv2.imwrite(r'D:\UCA\Fall 2025\Multimedia Computing\Project 4\Lena_median.jpg', median_filtered) #save the image as Lena_median.jpg
+cv2.imwrite(r'<Relative path of your folder where you want to save image>\Median.jpg', median_filtered) #save the image as Lena_median.jpg
 
 MSE3 = calculate_mse(original, median_filtered)
 SNR3 = calculate_snr(original, median_filtered)
@@ -92,7 +92,7 @@ def detect_noise(img): #function to detect noisy pixels
     return noise_mask.astype(np.uint8), detected
 
 noise_mask, detected_noise_image = detect_noise(noisy)
-cv2.imwrite(r'D:\UCA\Fall 2025\Multimedia Computing\Project 4\Lena_noise_detected_Grey.jpg', detected_noise_image) #save the image as Lena_noise_detected.jpg
+cv2.imwrite(r'<Relative path of your folder where you want to save image>\Noise_detected.jpg', detected_noise_image) #save the image as Lena_noise_detected.jpg
 
 print("Step 5..............................Complete")
 
@@ -102,7 +102,7 @@ selective_filtered = noisy.copy()
 
 #replace only noisy pixels
 selective_filtered[noise_mask == 1] = median_filtered_full[noise_mask == 1] #apply median filter only on detected noisy pixels
-cv2.imwrite(r'D:\UCA\Fall 2025\Multimedia Computing\Project 4\Lena_median_selective.jpg', selective_filtered) #save the image as Lena_median_selective.jpg
+cv2.imwrite(r'<Relative path of your folder where you want to save image>\Median_selective.jpg', selective_filtered) #save the image as Lena_median_selective.jpg
 
 MSE4 = calculate_mse(original, selective_filtered)
 SNR4 = calculate_snr(original, selective_filtered)
