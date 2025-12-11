@@ -77,6 +77,6 @@ How to run code
 -------------------------------------
 Author
 -------------------------------------
-**Shivam Patel, Mason Simpson** <br>
+**Shivam Patel & Mason Simpson** <br>
 University of Central Arkansas | Department of Computer Science
 
